@@ -9,8 +9,8 @@ fi
 
 echo "Installing base packages"
 
-./install-packages.sh
+sudo ./install-packages.sh
 
 echo "Installing essential packages"
 
-USER=$1 HOME=$2 ./install-essential.sh
+sudo USER="$1" HOME="$2" ./install-essential.sh
