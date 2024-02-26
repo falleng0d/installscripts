@@ -23,7 +23,7 @@ end
 EOF
 
 # install starship shell prompt
-wget https://starship.rs/install-starship.sh
+wget https://starship.rs/install.sh -O install-starship.sh
 chmod +x install-starship.sh
 ./install-starship.sh -y
 rm install-starship.sh
