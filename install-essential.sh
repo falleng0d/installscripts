@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # set fish as default shell
 chsh -s /usr/bin/fish "$USER"
 
@@ -31,7 +33,7 @@ echo 'eval "$(starship init bash)"' >>"$HOME"/.bashrc
 echo 'starship init fish | source' >>"$HOME"/.config/fish/config.fish
 
 # install homebrew
-su "$USER" USER="$USER" HOME="$HOME" ./install-essential-user.sh
+su "$USER" -c "USER=$USER HOME=$HOME ./install-essential-user.sh"
 
 # install node with nvs
 export NVS_HOME="$HOME/.nvs"
@@ -60,6 +62,8 @@ if command -v docker; then
 }
 EOF
 fi
+
+chown -R "$USER":"$USER" "$HOME"
 
 # cleanup
 apt-get autoremove -y
