@@ -23,10 +23,10 @@ end
 EOF
 
 # install starship shell prompt
-wget https://starship.rs/install.sh
-chmod +x install.sh
-./install.sh -y
-rm install.sh
+wget https://starship.rs/install-starship.sh
+chmod +x install-starship.sh
+./install-starship.sh -y
+rm install-starship.sh
 echo 'eval "$(starship init bash)"' >>"$HOME"/.bashrc
 echo 'starship init fish | source' >>"$HOME"/.config/fish/config.fish
 
