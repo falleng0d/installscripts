@@ -5,7 +5,7 @@ SHELL := /bin/bash
 PWD := $(shell pwd)
 
 install:
-	chmod +x scripts/*.sh
+	bash -c 'chmod +x ./scripts/*.sh'
 	./scripts/install.sh
 
 build:
