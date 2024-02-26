@@ -2,6 +2,8 @@
 
 set -e
 
+chmod +x *.sh
+
 echo "Installing base packages"
 
 sudo ./install-packages.sh
