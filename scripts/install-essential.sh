@@ -31,6 +31,7 @@ echo 'eval "$(starship init bash)"' >>"$HOME"/.bashrc
 echo 'starship init fish | source' >>"$HOME"/.config/fish/config.fish
 
 # install homebrew
+chown -R "$USER":"$USER" "$HOME"
 su "$USER" -c "USER=$USER HOME=$HOME ./install-essential-user.sh"
 
 # install node with nvs
