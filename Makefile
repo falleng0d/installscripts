@@ -4,6 +4,10 @@ SHELL := /bin/bash
 
 PWD := $(shell pwd)
 
+install:
+	chmod +x scripts/*.sh
+	./scripts/install.sh
+
 build:
 	rm -f build.log | true
 	docker build --tag install-essential --progress=plain . 2>&1 | tee build.log
