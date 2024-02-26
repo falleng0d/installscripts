@@ -11,8 +11,6 @@ chown -R "$USER":"$USER" "$HOME"
 keybindings="$HOME/.config/fish/functions/fish_user_key_bindings.fish"
 tee "$keybindings" <<EOF
 function fish_user_key_bindings
-  fzf_key_bindings
-
   #bind \x7F 'backward-kill-bigword'
   bind \e\[3\;3~ delete-current-history-search
 
