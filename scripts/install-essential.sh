@@ -32,7 +32,7 @@ echo 'starship init fish | source' >>"$HOME"/.config/fish/config.fish
 
 # install homebrew
 chown -R "$USER":"$USER" "$HOME"
-su "$USER" -c "USER=$USER HOME=$HOME ./install-essential-user.sh"
+su -P "$USER" -c "USER=$USER HOME=$HOME ./install-essential-user.sh"
 
 # install node with nvs
 export NVS_HOME="$HOME/.nvs"
@@ -40,6 +40,7 @@ echo 'export NVS_HOME="$HOME/.nvs"' >> "$HOME"/.bashrc
 echo 'export NVS_HOME="$HOME/.nvs"' >> "$HOME"/.config/fish/config.fish
 git clone https://github.com/jasongin/nvs "$NVS_HOME"
 . "$NVS_HOME/nvs.sh" install
+[ -s "$NVS_HOME/nvs.sh" ] && . "$NVS_HOME/nvs.sh"
 nvs add 18
 nvs link 18
 nvs use 18
