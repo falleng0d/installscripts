@@ -6,7 +6,7 @@ PWD := $(shell pwd)
 
 install:
 	bash -c 'chmod +x ./scripts/*.sh'
-	./scripts/install.sh
+	cd scripts && ./install.sh
 
 build:
 	rm -f build.log | true
