@@ -56,6 +56,8 @@ fi
 
 # install homebrew
 chown -R "$USER":"$USER" "$HOME"
+mkdir -p /home/linuxbrew/.linuxbrew
+chmod -R 777 /home/linuxbrew
 su -P "$USER" -c "USER=$USER HOME=$HOME ./install-essential-user.sh"
 
 # install node with nvs
