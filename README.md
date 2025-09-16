@@ -53,9 +53,7 @@ A comprehensive collection of automated installation scripts for setting up a mo
 Clone the repository and run the installation script:
 
 ```bash
-git clone <repository-url>
-cd installscripts
-make install
+git clone https://github.com/falleng0d/installscripts.git && cd installscripts && make install
 ```
 
 Or manually:
