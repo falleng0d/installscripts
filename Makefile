@@ -4,6 +4,10 @@ install:
 	bash -c 'chmod +x ./scripts/*.sh'
 	cd scripts && ./install.sh
 
+install-optional:
+	bash -c 'chmod +x ./scripts/*.sh'
+	cd scripts && $(shell sudo USER="$(whoami)" HOME="${HOME}" ./install-optional.sh)
+
 build:
 	rm -f build.log | true
 	docker build --tag install-essential --progress=plain . 2>&1 | tee build.log
